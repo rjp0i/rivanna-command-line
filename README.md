@@ -1,7 +1,8 @@
 ### [Rivanna](https://www.rc.virginia.edu/userinfo/rivanna/overview/) from the command line
 A guide for [StatLab](https://data.library.virginia.edu/statlab/) ([on GitHub](https://github.com/uvastatlab))<br>
 Author: [Jacob Goldstein-Greenwood](https://github.com/jacob-gg)<br>
-Last updated: 2023-07-26
+Updated: Ricky Patterson<br>
+Last updated: 2025-02-11
 
 #### Contents
 - [Logging in with SSH](#logging-in-with-ssh)  
@@ -13,7 +14,7 @@ Last updated: 2023-07-26
 ---
 #### Logging in with SSH
 
-`ssh -Y <usr>@rivanna.hpc.virginia.edu`
+`ssh -Y <usr>@login.hpc.virginia.edu`
 
 If you're not accessing Rivanna on UVA WiFi, you'll need to use a VPN (UVA More Secure Network or UVA Anywhere VPN). You'll be prompted for your NetBadge password. As you type, nothing will appear; this is a normal security precaution.
 
@@ -97,8 +98,8 @@ _Local to remote:_
 - Directory: `rsync -r local/dir <usr>@rivanna.hpc.virginia.edu:target/dir`
 
 _Remote to local:_
-- File: `rsync <usr>@rivanna.hpc.virginia.edu:remote/file target/dir`
-- Directory: `rsync -r <usr>@rivanna.hpc.virginia.edu:remote/dir target/dir`
+- File: `rsync <usr>@login.hpc.virginia.edu:remote/file target/dir`
+- Directory: `rsync -r <usr>@login.hpc.virginia.edu:remote/dir target/dir`
 
 Some key rsync options (see more [here](https://download.samba.org/pub/rsync/rsync.1)):
 - `-r`: copy recursively, so directories within a directory are copied also
@@ -109,15 +110,16 @@ Some key rsync options (see more [here](https://download.samba.org/pub/rsync/rsy
 **scp**
 
 _Local to remote:_  
-- File: `scp local/file <usr>@rivanna.hpc.virginia.edu:/target/dir`  
-- Directory: `scp -r local/dir <usr>@rivanna.hpc.virginia.edu:/target/dir`
+- File: `scp local/file <usr>@login.hpc.virginia.edu:/target/dir`  
+- Directory: `scp -r local/dir <usr>@login.hpc.virginia.edu:/target/dir`
 
 _Remote to local:_  
-- File: `scp <usr>@rivanna.hpc.virginia.edu:/path/file /target/dir`  
-- Directory: `scp -r <usr>@rivanna.hpc.virginia.edu:/path/dir /target/dir`
+- File: `scp <usr>@login.hpc.virginia.edu:/path/file /target/dir`  
+- Directory: `scp -r <usr>@login.hpc.virginia.edu:/path/dir /target/dir`
 
 ---
 #### Miscellaneous Rivanna commands
+#### Note that allocation names changed in Oct 2024, and PI needed for allocations is now our AUL
 
 `allocations`: view all allocations associated with your account  
 `allocations -a <alloc>`: view details for a specific allocation  
